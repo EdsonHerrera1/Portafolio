@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Profesional – Tu Nombre</title>
+  <meta name="description" content="Portafolio profesional con proyectos destacados, documentación y reflexiones." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">👋</div>
+        <div>
+          <h1>Tu Nombre</h1>
+          <p class="subtitle">Ciencia de Datos · Machine Learning · Automatización</p>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#retro">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Inicio -->
+    <section id="inicio" class="card">
+      <h2>Inicio</h2>
+      <p>
+        Este portafolio reúne una selección de proyectos que desarrollé para consolidar mis habilidades en
+        <strong>análisis de datos</strong>, <strong>machine learning</strong> y <strong>automatización</strong>. 
+        No solo muestro resultados, también <em>cómo</em> fueron construidos: decisiones, retos técnicos y aprendizajes.
+      </p>
+      <ul class="badges">
+        <li>Python</li><li>SQL</li><li>Power BI</li><li>TensorFlow</li><li>Spark</li><li>NiFi</li>
+      </ul>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="card">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy <strong>Tu Nombre</strong>, me motiva transformar datos en decisiones y construir soluciones simples que impacten el negocio.
+        Trabajo con equipos, documento procesos y cuido los detalles de experiencia de usuario y accesibilidad.
+      </p>
+      <p>
+        Objetivo actual: aportar en roles de <strong>Data Analyst / Data Scientist</strong> con foco en calidad, reproducibilidad y mejora continua.
+      </p>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects-grid">
+      <!-- Proyecto 1 -->
+      <article class="card project">
+        <div class="project-head">
+          <h3>Detección de Noticias Falsas en Twitter</h3>
+          <span class="tech">Python · Keras · BERT</span>
+        </div>
+        <p class="project-desc">
+          Clasificador que combina embeddings BERT con características de usuario/red para identificar rumores en hilos.
+        </p>
+        <ul class="project-list">
+          <li><strong>Objetivo:</strong> detectar señales de desinformación en hilos.</li>
+          <li><strong>Rol:</strong> pipeline, entrenamiento y evaluación del modelo.</li>
+          <li><strong>Resultados:</strong> precisión ~78% en test.</li>
+          <li><strong>Tecnologías:</strong> Python, TensorFlow/Keras, pandas, scikit-learn.</li>
+        </ul>
+        <details class="learned">
+          <summary>Lecciones aprendidas</summary>
+          <ul>
+            <li>La combinación de texto + features estructuradas mejora métricas frente a enfoques aislados.</li>
+            <li>Importancia de balanceo de clases y validación honesta por evento.</li>
+            <li>Documentar supuestos acelera la depuración al final del proyecto.</li>
+          </ul>
+        </details>
+        <div class="project-links">
+          <a class="btn" href="#" aria-disabled="true">Código (GitHub)</a>
+          <a class="btn ghost" href="#" aria-disabled="true">Demo / Informe</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="card project">
+        <div class="project-head">
+          <h3>Dashboard de Ventas Interactivo</h3>
+          <span class="tech">Power BI · Power Query</span>
+        </div>
+        <p class="project-desc">
+          Tablero con métricas de ventas por región, producto y canal para decisiones ágiles.
+        </p>
+        <ul class="project-list">
+          <li><strong>Objetivo:</strong> reducir tiempos de reporte y mejorar visibilidad.</li>
+          <li><strong>Rol:</strong> modelado de datos, DAX y diseño de visualizaciones.</li>
+          <li><strong>Resultados:</strong> -60% en tiempos de generación de informes.</li>
+          <li><strong>Tecnologías:</strong> Power BI, Excel/CSV, Power Query.</li>
+        </ul>
+        <details class="learned">
+          <summary>Lecciones aprendidas</summary>
+          <ul>
+            <li>Menos es más: priorizar KPI clave mejora la adopción del dashboard.</li>
+            <li>Diccionario de datos evita ambigüedades al compartir el tablero.</li>
+            <li>Pruebas con usuarios finales revelan mejoras de UX no obvias.</li>
+          </ul>
+        </details>
+        <div class="project-links">
+          <a class="btn" href="#" aria-disabled="true">Repositorio</a>
+          <a class="btn ghost" href="#" aria-disabled="true">Capturas</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="card project">
+        <div class="project-head">
+          <h3>ETL Automatizado con Apache NiFi → PostgreSQL</h3>
+          <span class="tech">NiFi · PostgreSQL · Python</span>
+        </div>
+        <p class="project-desc">
+          Ingesta y transformación de CSV→JSON con carga en BD; incluye reintentos, trazabilidad y monitoreo básico.
+        </p>
+        <ul class="project-list">
+          <li><strong>Objetivo:</strong> robustecer la integración de datos.</li>
+          <li><strong>Rol:</strong> diseño y parametrización del flujo.</li>
+          <li><strong>Resultados:</strong> -40% tiempo de procesamiento vs carga manual.</li>
+          <li><strong>Tecnologías:</strong> NiFi, PostgreSQL, Python.</li>
+        </ul>
+        <details class="learned">
+          <summary>Lecciones aprendidas</summary>
+          <ul>
+            <li>Convenciones de nombres y rutas evitan rutas rotas al desplegar.</li>
+            <li>Validaciones tempranas reducen errores cuesta abajo.</li>
+            <li>Logs legibles simplifican el soporte y la retroalimentación.</li>
+          </ul>
+        </details>
+        <div class="project-links">
+          <a class="btn" href="#" aria-disabled="true">Guía</a>
+          <a class="btn ghost" href="#" aria-disabled="true">Capturas</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Buenas prácticas -->
+    <section class="card">
+      <h2>Buenas prácticas</h2>
+      <ul class="check">
+        <li>Estructura consistente en todos los proyectos.</li>
+        <li>Enlaces verificados y accesibles.</li>
+        <li>Ortografía y gramática cuidadas.</li>
+        <li>Diseño limpio y navegación intuitiva.</li>
+      </ul>
+    </section>
+
+    <!-- Retroalimentación -->
+    <section id="retro" class="card">
+      <h2>Deja tu retroalimentación</h2>
+      <p>Tu opinión me ayuda a mejorar. Puedes dejar comentarios o sugerencias aquí:</p>
+      <div class="project-links">
+        <a class="btn" href="https://forms.gle/TU-FORM-REAL" target="_blank" rel="noopener">Formulario de feedback</a>
+        <a class="btn ghost" href="mailto:tu.email@ejemplo.com">Escribir por correo</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="card">
+      <h2>Contacto</h2>
+      <p>
+        ¿Conectamos? Escríbeme a <a href="mailto:tu.email@ejemplo.com">tu.email@ejemplo.com</a> o visita mi 
+        <a href="#" aria-disabled="true">GitHub</a> / <a href="#" aria-disabled="true">LinkedIn</a>.
+      </p>
+    </section>
+
+    <!-- Cierre/reflexión -->
+    <section class="card">
+      <h2>Cierre</h2>
+      <p>
+        Este portafolio refleja un proceso de aprendizaje continuo: revisión crítica, mejora iterativa y apertura al feedback.
+        Gracias por visitar y por tus comentarios.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Tu Nombre · Portafolio</p>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
